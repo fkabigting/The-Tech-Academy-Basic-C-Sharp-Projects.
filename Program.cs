@@ -36,8 +36,7 @@ namespace MyConsoleProject.cs
             Console.WriteLine(mainitsaloob);
             Console.ReadLine();
          */
-
-            
+            /*
             Console.WriteLine("Please enter a number: "); //Displays the message
             string UserInput1 = Console.ReadLine(); //value from user is stored in a variable called UserInput1
             long N1 = long.Parse(UserInput1) + 50; //a variable N1 is used to strore the value of the converted UserInput1 (String) to long integer
@@ -69,8 +68,34 @@ namespace MyConsoleProject.cs
             double N5 = double.Parse(UserInput3) % 7;
             Console.WriteLine("The remainder is " + N5 + "\n\nPlease press ENTER");
             Console.ReadLine();
+            */
+            Console.WriteLine("Welcome to Package Express. Please follow the instructions below."); //Displays the message
+            Console.WriteLine("Enter Package Weight? "); //Displays the message
+            int Wt = Convert.ToInt32(Console.ReadLine());
 
+            if (Wt > 50)
+            {
+                Console.WriteLine("Package too heavy to be shipped via Package Express. Have a good day.");
+                Console.ReadLine();
 
+            }
+            else
+            {
+                Console.WriteLine("Enter Package Width? "); //Displays the message
+                int Wd = Convert.ToInt32(Console.ReadLine()); //Converts input from user to interger and assigned the value to Wd 
+               
+                Console.WriteLine("Enter Package Height? "); //Displays the message
+                int Ht = Convert.ToInt32(Console.ReadLine()); //Converts input from user to interger and assigned the value to Ht
+
+                Console.WriteLine("Enter Package Length? "); //Displays the message
+                int Lt = Convert.ToInt32(Console.ReadLine()); //Converts input from user to interger and assigned the value to Lt
+
+                int TotalFee = ((Wd * Ht * Lt) * Wt) / 100; // TotalFee will hold the result of the formula - 
+
+                Console.WriteLine("Your Total Shipping Amount is: $ " + TotalFee); //Displays the message in quotes, then add the value of TotalFee
+                Console.ReadLine(); //Pause screen to view
+                
+            }
 
 
         }
