@@ -79,8 +79,8 @@ namespace MyConsoleProject.cs
                 Console.ReadLine();
 
             }
-            else
-            {
+            
+            
                 Console.WriteLine("Enter Package Width? "); //Displays the message
                 int Wd = Convert.ToInt32(Console.ReadLine()); //Converts input from user to interger and assigned the value to Wd 
                
@@ -92,12 +92,22 @@ namespace MyConsoleProject.cs
 
                 int TotalFee = ((Wd * Ht * Lt) * Wt) / 100; // TotalFee will hold the result of the formula - 
 
+            if (TotalFee > 50)
+            {
+                Console.WriteLine("Package too big to be shipped via Package Express. Have a good day.");
+                Console.ReadLine();
+            }
+
+            else
+            {
                 Console.WriteLine("Your Total Shipping Amount is: $ " + TotalFee); //Displays the message in quotes, then add the value of TotalFee
                 Console.ReadLine(); //Pause screen to view
-                
             }
 
 
-        }
+
+
+
+            }
     }
 }
